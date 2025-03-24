@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .slider-container {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .slider-images {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .slider-images img {
+      width: 100%;
+      display: block;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Slider</h1>
+
+  <div class="slider-container">
+    <div class="slider-images" id="sliderImages">
+      <!-- Images will be inserted here via JavaScript -->
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
